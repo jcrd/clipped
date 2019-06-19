@@ -1,0 +1,42 @@
+=head1 NAME
+
+clipped - X11 primary/clipboard selection monitor
+
+=head1 SYNOPSIS
+
+B<clipped> [options]
+
+=head1 DESCRIPTION
+
+clipped monitors the ownership of the primary and clipboard X11 selections.
+When ownership changes, the name of the selection that changed is printed.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-h>
+
+Show help message.
+
+=item B<-s> I<SELECTION>
+
+Monitor this selection. Valid I<SELECTION>s are "primary" and "clipboard".
+
+=item B<-v>
+
+Show version.
+
+=back
+
+=head1 AUTHOR
+
+James Reed E<lt>jcrd@tuta.ioE<gt>
+
+=head1 REPORTING BUGS
+
+Bugs and issues can be reported here: L<https://github.com/jcrd/clipped/issues>
+
+=head1 COPYRIGHT
+
+Copyright 2019 James Reed. clipped is licensed under the MIT License.

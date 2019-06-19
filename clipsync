@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This project is licensed under the MIT License (see LICENSE).
+
+skip=false
+
+while read -r selection; do
+    if $skip; then
+        skip=false
+        continue
+    fi
+    case "$selection" in
+        PRIMARY)
+            skip=true
+            xclip -selection primary -o | xclip -selection clipboard -i
+            ;;
+        CLIPBOARD)
+            skip=true
+            xclip -selection clipboard -o | xclip -selection primary -i
+            ;;
+    esac
+done < <(clipped)

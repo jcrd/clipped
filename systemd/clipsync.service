@@ -1,0 +1,10 @@
+[Unit]
+Description=clipsync
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=/usr/bin/clipsync
+Restart=always
+
+[Install]
+WantedBy=graphical-session.target

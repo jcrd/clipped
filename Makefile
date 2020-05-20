@@ -3,6 +3,7 @@ VERSION := $(shell $(VERSIONCMD) || cat VERSION)
 
 PREFIX ?= /usr/local
 BINPREFIX ?= $(PREFIX)/bin
+LIBPREFIX ?= $(PREFIX)/lib
 MANPREFIX ?= $(PREFIX)/share/man
 
 CPPFLAGS += -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\"
@@ -23,12 +24,15 @@ install:
 	mkdir -p $(DESTDIR)$(BINPREFIX)
 	cp -p clipped $(DESTDIR)$(BINPREFIX)
 	cp -p clipsync $(DESTDIR)$(BINPREFIX)
+	mkdir -p $(DESTDIR)$(LIBPREFIX)/systemd/user
+	cp -p systemd/clipsync.service $(DESTDIR)$(LIBPREFIX)/systemd/user
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	cp -p $(MANPAGE) $(DESTDIR)$(MANPREFIX)/man1
 
 uninstall:
 	rm -f $(DESTDIR)$(BINPREFIX)/clipped
 	rm -f $(DESTDIR)$(BINPREFIX)/clipsync
+	rm -f $(DESTDIR)$(LIBPREFIX)/systemd/user/clipsync.service
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/$(MANPAGE)
 
 clean:

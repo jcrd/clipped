@@ -17,6 +17,14 @@ options:
   -v            Show version
 ```
 
+### clipsync
+
+Enable the systemd service to run when the `graphical-session.target` is
+reached:
+```
+systemctl --user enable clipsync
+```
+
 ## License
 
 This project is licensed under the MIT License (see [LICENSE](LICENSE)).

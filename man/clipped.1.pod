@@ -39,4 +39,4 @@ Bugs and issues can be reported here: L<https://github.com/jcrd/clipped/issues>
 
 =head1 COPYRIGHT
 
-Copyright 2019 James Reed. clipped is licensed under the MIT License.
+Copyright 2019-2020 James Reed. clipped is licensed under the MIT License.

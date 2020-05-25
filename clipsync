@@ -12,11 +12,11 @@ while read -r selection; do
     case "$selection" in
         PRIMARY)
             skip=true
-            xclip -selection primary -o | xclip -selection clipboard -i
+            xsel | xsel -ib
             ;;
         CLIPBOARD)
             skip=true
-            xclip -selection clipboard -o | xclip -selection primary -i
+            xsel -b | xsel -i
             ;;
     esac
 done < <(clipped)

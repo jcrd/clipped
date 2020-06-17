@@ -1,4 +1,4 @@
-# clipped
+# clipped [![Copr build status](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/)
 
 clipped monitors the ownership of the primary and clipboard X11 selections.
 When ownership changes, the name of the selection that changed is printed.

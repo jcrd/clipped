@@ -1,0 +1,6 @@
+FROM supplantr/toolbox
+
+RUN dnf install -y gcc
+RUN dnf install -y perl
+RUN dnf install -y libX11-devel
+RUN dnf install -y libXfixes-devel

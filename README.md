@@ -1,10 +1,20 @@
-# clipped [![Copr build status](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/)
+# clipped
 
 clipped monitors the ownership of the primary and clipboard X11 selections.
 When ownership changes, the name of the selection that changed is printed.
 
 It also provides the `clipsync` script to synchronize content between the
 primary and clipboard selections using `xclip`.
+
+## Packages
+
+* **RPM** package available from [copr][1]. [![Copr build status](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/jcrd/clipped/package/clipped/)
+
+  Install with:
+  ```
+  dnf copr enable jcrd/clipped
+  dnf install clipped
+  ```
 
 ## Usage
 
@@ -32,3 +42,5 @@ This project is licensed under the MIT License (see [LICENSE](LICENSE)).
 ## Acknowledgements
 
 * Inspired by [clipnotify](https://github.com/cdown/clipnotify)
+
+[1]: https://copr.fedorainfracloud.org/coprs/jcrd/clipped/

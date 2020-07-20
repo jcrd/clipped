@@ -4,7 +4,7 @@ clipped monitors the ownership of the primary and clipboard X11 selections.
 When ownership changes, the name of the selection that changed is printed.
 
 It also provides the `clipsync` script to synchronize content between the
-primary and clipboard selections using `xclip`.
+primary and clipboard selections using `xsel`.
 
 ## Packages
 
